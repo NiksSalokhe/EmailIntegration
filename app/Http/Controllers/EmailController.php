@@ -17,7 +17,7 @@ class EmailController extends Controller
         $data['subject'] = $request->subject;
         $data['msg'] = $request->message;
         Mail::send('email', $data, function ($message) use ($data) {
-            $message->to('nikhilnsalokhe12@gmail.com')
+            $message->to('your-email')
             ->subject($data['subject']);
     });
 
